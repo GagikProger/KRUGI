@@ -32,30 +32,7 @@ class Example(QMainWindow):
         self.itoge = ""
 
     def checker(self):
-        if self.sender().text() == "=":
-            try:
-                self.itoge = eval(self.nmb)
-                self.table.display(self.itoge)
-            except ZeroDivisionError:
-                self.table.display("ZeroDivisionError!")
-            self.nmb = ""
-            self.itoge = ""
-        elif self.sender().text() == "√":
-            self.itoge = math.sqrt(int(self.nmb))
-            self.table.display(self.itoge)
-            self.nmb = ""
-            self.itoge = ""
-        elif self.sender().text() == "!":
-            self.itoge = math.factorial(int(self.nmb))
-            self.table.display(self.itoge)
-            self.nmb = ""
-            self.itoge = ""
-        else:
-            self.nmb += self.sender().text()
-            self.table.display(self.nmb)
 
-    def clr(self):
-        self.table.display("")
 
 
 if __name__ == '__main__':
