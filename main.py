@@ -12,7 +12,6 @@ class Example(QMainWindow):
         self.do_paint = False
         self.pushButton.clicked.connect(self.paint)
 
-
     def paintEvent(self, event):
         if self.do_paint:
             qp = QPainter()
@@ -20,11 +19,9 @@ class Example(QMainWindow):
             self.draw_flag(qp)
             qp.end()
 
-
     def paint(self):
         self.do_paint = True
         self.repaint()
-
 
     def draw_flag(self, qp):
         qp.setBrush(QColor(216, 216, 39))
